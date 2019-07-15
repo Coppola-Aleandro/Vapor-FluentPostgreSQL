@@ -18,3 +18,14 @@
         <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
     </a>
 </p>
+
+<br/>
+<br/>
+<h2> Run </h2>
+<p>
+    - git clone git@github.com:Coppola-Aleandro/Vapor-FluentPostgreSQL.git Todo<br>
+    - cd Todo <br>
+    - vapor xcode (to generate xCode project) <br>
+    - In Sources/App/configure.swift write your data connection to postgres DB (host, port, dbuser, dbname, password)<br> 
+    - Select SCHEME run and build and run in My Mac     
+    </p>
