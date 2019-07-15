@@ -1,23 +1,28 @@
-import FluentSQLite
+import FluentPostgreSQL
 import Vapor
 
 /// A single entry of a Todo list.
-final class Todo: SQLiteModel {
+final class Todo: PostgreSQLModel {
     /// The unique identifier for this `Todo`.
     var id: Int?
 
     /// A title describing what this `Todo` entails.
     var title: String
 
+    var descriptionTest: String
+    
     /// Creates a new `Todo`.
-    init(id: Int? = nil, title: String) {
+    init(id: Int? = nil, title: String, descriptionTest: String) {
         self.id = id
         self.title = title
+        self.descriptionTest = descriptionTest
     }
 }
 
 /// Allows `Todo` to be used as a dynamic migration.
-extension Todo: Migration { }
+extension Todo: Migration {
+    
+}
 
 /// Allows `Todo` to be encoded to and decoded from HTTP messages.
 extension Todo: Content { }
