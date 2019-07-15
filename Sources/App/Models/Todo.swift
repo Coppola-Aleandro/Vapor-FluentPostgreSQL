@@ -7,15 +7,12 @@ final class Todo: PostgreSQLModel {
     var id: Int?
 
     /// A title describing what this `Todo` entails.
-    var title: String
-
-    var descriptionTest: String
+    var title: String    
     
     /// Creates a new `Todo`.
-    init(id: Int? = nil, title: String, descriptionTest: String) {
+    init(id: Int? = nil, title: String) {
         self.id = id
         self.title = title
-        self.descriptionTest = descriptionTest
     }
 }
 
